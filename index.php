@@ -10,7 +10,6 @@ use Twitter\Search\Search;
 
 $search = new Search();
 $search->setToken("YOUR_API_KEY", "YOUR_API_SECRET");
-$value = ["q" => "Vahan Terzibashian"];
-echo "<pre>";
-print_r($search->search($value));
-echo "</pre>";
+$search->setValues('#Nasa', 20);
+header('Content-Type: application/json');
+echo json_encode($search->search());
