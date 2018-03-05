@@ -1,10 +1,22 @@
 {
+    "name": "vahan90/twitter-search", 
+    "description": "A PHP-SDK for Twitter Search API that will be extended to include all features",
+    "keywords": ["twitter search", "search", "laravel", "guzzle", "vahan"],
+    "type": "package",
     "require": {
         "guzzlehttp/guzzle": "^6.2"
     },
+    "license": "MIT",
+    "authors": [{ 
+        "name": "Vahan Terzibashian", 
+        "email": "vahan8@gmail.com"
+    }],
     "autoload": {
         "psr-4": {
-            "Twitter\\" : "Twitter/"
+            "Twitter\\": "Twitter/"
         }
-    }
+    },
+    "version": "1.0.0",
+    "minimum-stability": "dev"
+
 }
