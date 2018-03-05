@@ -22,15 +22,15 @@ class Base
     public function setToken($token, $secret)
     {
         $this->token = $token;
-        $this->tokenSecret = $tokenSecret;
+        $this->tokenSecret = $secret;
     }
 
     protected function prepareAccessToken()
     {
         try{
             $url = "https://api.twitter.com/oauth2/token";
-            $value = ['grant_type' => "client_credentials"];
-            $header = ['Authentication' => 'Basic ' . base64_encode($this->token. ":" . $this->tokenSecret),
+            $value = ["grant_type" => "client_credentials"];
+            $header = ['Authorization' => 'Basic ' . base64_encode($this->token. ":" . $this->tokenSecret),
                        "Content-Type" => "application/x-www-form-urlencoded;charset=UTF-8"
             ];
             $response = $this->client->post($url, ['query' => $value, 'headers' => $header]);
