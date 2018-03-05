@@ -1,4 +1,4 @@
-# Project Title
+# twitter-search
 
 Here is a simple twitter php api handling package. I will add more features from time to time.
 
