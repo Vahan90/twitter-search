@@ -31,6 +31,9 @@ composer install
 Afterwards check out my index.php file in there to get a feel.
 
 ```
+include "vendor/autoload.php";
+use Twitter\Search\Search;
+
 $search = new Search();
 $search->setToken('API_KEY','API_SECRET');
 $search->setValues('query', 'count(optional)');
